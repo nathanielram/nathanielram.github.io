@@ -1,0 +1,11 @@
+# Jekyll
+/_site
+
+
+# Remove everything from vagrant-github-site-dev
+/.vagrant
+/nodes
+/roles
+Berksfile*
+Gemfile*
+Vagrantfile

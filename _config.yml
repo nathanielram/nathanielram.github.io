@@ -1,0 +1,29 @@
+name: nathanielram
+description: 'This is my site!'
+meta_description: "This is a meta description of my site!"
+title: Nathaniel Ram
+#author: Nathaniel Ram
+timezone: Canada/Eastern
+
+url: http://nathanielram.com
+#baseurl: /nathanielram.com
+
+permalink: /:year/:month/:title
+
+markdown: kramdown
+#markdown: redcarpet
+highlighter: pygments
+paginate: 5
+
+exclude: [Berksfile, Berksfile.lock, Gemfile, Gemfile.lock, Vagrantfile, README.md, nodes, roles]
+
+sass:
+  sass_dir: _sass
+  #style: :compressed
+
+gems:
+  - jekyll-sitemap
+
+# GitHub overrides; don't touch
+safe: true
+lsi: false

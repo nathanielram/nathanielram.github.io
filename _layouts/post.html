@@ -1,0 +1,25 @@
+---
+layout: default
+excerpt: 'this is the excerpt. by default this will be the first paragraph'
+---
+<div id="post">
+	{{ content }}
+	<div>Tags: {{ page.tags | array_to_sentence_string }}</div>
+	<div>Categories: {{ page.categories| array_to_sentence_string }}</div>
+</div>
+
+<div id="related">
+	<h2>Related Posts</h2>
+	<ul class="posts">
+	{% for post in site.related_posts limit:3 %}
+		<li>
+			{{ post.excerpt }}
+			<span>{{ post.date | date_to_long_string  }}</span> 
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+	{% endfor %}
+  </ul>
+</div>
+
+<a href="{{page.next}}">Next</a>
+<a href="{{page.previous}}">Previous</a>

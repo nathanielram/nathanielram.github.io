@@ -1,0 +1,34 @@
+<aside id="sidebar">
+	<p>Using the Architect theme by Jason Long</p>
+
+	<h2>Categories</h2>
+	{% for category in site.categories %}
+  		<a name="{{ category | first }}">{{ category | first }}</a>
+    		<ul>
+    		{% for posts in category %}
+     			 {% for post in posts %}
+     			 	{% if post.url %}
+       				 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+     			 	{% endif %}
+     		 	{% endfor %}
+    		{% endfor %}
+   			 </ul>
+  		</li>
+	{% endfor %}
+
+	<h2>Tags</h2>
+	{% for tag in site.tags %}
+  		<a name="{{ tag | first }}">{{ tag | first }}</a>
+    		<ul>
+    		{% for posts in tag %}
+     			 {% for post in posts %}
+     			 	{% if post.url %}
+       				 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+     			 	{% endif %}
+     		 	{% endfor %}
+    		{% endfor %}
+   			 </ul>
+  		</li>
+	{% endfor %}
+
+</aside>
