@@ -1,4 +1,4 @@
 nathanielram.github.io
 ======================
 
-Built using github.com/nathanielram.com/vagrant-github-site-dev
+Built using [my vagrant-github-site-dev repo](http://github.com/nathanielram/vagrant-github-site-dev)
